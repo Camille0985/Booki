@@ -19,7 +19,6 @@ header{
     flex-direction: row;
     padding: 45px 0;
     justify-content: space-between;
-    width: 100%;
 
 }
 
@@ -35,7 +34,7 @@ nav{
 header a{
     padding: 43px 18px 0 18px;
     text-decoration: none;
-    color: black;
+    color: inherit;
     font-size: 16px;
 }
 
@@ -44,7 +43,7 @@ header a:hover{
     border-top: solid #0065FC 3px;
 }
 
-#hebergements, #populaires{
+.hebergements, .populaires{
     padding: 20px;
 }
 
@@ -116,13 +115,18 @@ input{
     align-items: center;
 }
 
+.filtres{
+    width: 100%;
+}
+
 .filtre{
     width: auto;
     height: 50px;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
     background-color: #FFFFFF;
-    padding: 0 20px;
+    padding: 0 2%;
+    margin: 0 1% 0 1%;
     font-size: 17px;
     white-space: nowrap;
     text-align: center;
@@ -133,7 +137,6 @@ input{
     margin-right: 5px;
     font-size: 20px;
     margin-right: 10px;
-    vertical-align: middle;
 }
 
 .filtre:hover{
@@ -304,7 +307,7 @@ span{
 }
 
 .activites h4{
-    margin: 15px 0 0 19px;
+    
 }
 
 footer{
@@ -337,28 +340,46 @@ footer li{
 
 footer a{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 .cartes-cliquables{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 
 @media screen and (max-width: 992px) {
+
+    header{
+        width: 880px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trouver-hebergement{
+        width: 880px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .hebergements-et-populaires{
         display: block;
     }
 
     .hebergements{
-        width: 100%;
+        width: 880px;
+        margin-left: auto;
+        margin-right: auto;
+
     }
 
     .populaires{
-        width: 100%;
+        width: 880px;
         height: 278px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 53px;
     }
 
     .container-populaires{
@@ -385,10 +406,6 @@ footer a{
         font-size: 12px;
     }
 
-    .populaires{
-        margin-top: 53px;
-    }
-
     .populaires h4{
         width: 111px;
     }
@@ -398,7 +415,13 @@ footer a{
     }
 
     .etoiles-populaires{
-        vertical-align: bottom;
+        bottom: 0;
+    }
+
+    .activites{
+        width: 880px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .carte-activites{
@@ -410,8 +433,12 @@ footer a{
         height: 211px;
     }
 
+    .titre-carte-activités{
+        height: 56px;
+    }
+
     .activites h4{
-        vertical-align: super;
+        
     }
 
     .filtres{
@@ -424,6 +451,29 @@ footer a{
 
     .colonnes-footer{
         gap: 40px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    header{
+        display: block;
+        text-align: center;
+    }
+
+    #logo{
+        margin-bottom: 40px;
+    }
+
+    header a{
+        padding-bottom: 20px;
+    }
+
+    header a:hover{
+        color: #0065FC;
+        border-bottom: solid #0065FC 3px;
+        border-top: none;
     }
 
 }
