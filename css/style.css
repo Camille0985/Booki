@@ -3,9 +3,11 @@
 
 
 body{
+    max-width: 1400px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1400px;
+    
 }
 
 *{
@@ -19,6 +21,7 @@ header{
     flex-direction: row;
     padding: 45px 0;
     justify-content: space-between;
+    width: 90%;
 
 }
 
@@ -116,7 +119,9 @@ input{
 }
 
 .filtres{
-    width: 100%;
+    display: flex;
+    width: 90%;
+    gap: 30px;
 }
 
 .filtre{
@@ -125,8 +130,7 @@ input{
     border: 2px solid #d9d9d9;
     border-radius: 25px;
     background-color: #FFFFFF;
-    padding: 0 2%;
-    margin: 0 1% 0 1%;
+    padding: 0 20px;
     font-size: 17px;
     white-space: nowrap;
     text-align: center;
@@ -134,9 +138,8 @@ input{
 
 .icones-filtres{
     color: #0065FC;
-    margin-right: 5px;
+    margin-right: 15px;
     font-size: 20px;
-    margin-right: 10px;
 }
 
 .filtre:hover{
@@ -162,7 +165,7 @@ input{
 .hebergements-et-populaires{
     display: flex;
     justify-content: space-between;
-    margin: 20px auto 0 auto;
+    width: 90%;
 }
 
 .hebergements, .populaires{
@@ -171,7 +174,7 @@ input{
 
 .hebergements{
     height: 626px;
-    width: 63%;
+    width: 65%;
     border-radius: 20px;
 }
 
@@ -183,15 +186,16 @@ input{
 
 .container-hebergements{
     display: grid;
-    grid-template-columns: 29% 29% 29%;
-    gap: 35px;
+    grid-template-columns: 30% 30% 30%;
+    gap: 25px;
     justify-content: center;
     align-items: center;
 }
 
 .carte-hebergements{
     width: 100%;
-    height: 199px;
+    height: auto;
+    padding-bottom: 5px;
     border-radius: 20px;
     background-color: #FFFFFF;
     box-shadow: -2px 8px 8px 2px rgb(227, 227, 227);
@@ -207,17 +211,25 @@ input{
 
 .description-hebergements{
     margin-left: 15px;
-    width: 204px;
+    width: 90%;
+}
+
+.titre-prix-carte-hebergements{
+    height: 60px;
 }
 
 .description-hebergements p, .description-populaires p{
-    margin: 6px 0;
+    margin-top: 6px;
     font-size: 14px;
 }
 
 .etoiles{
     display: flex;
     gap: 0.3px;
+}
+
+.hebergements .etoiles{
+    padding: 7px 0 5px;
 }
 
 .fa-star{
@@ -268,8 +280,8 @@ span{
 }
 
 .carte-populaires{
-    height: 144px;
-    width: 90%;
+    height: auto;
+    width: 100%;
     border-radius: 20px;
     background-color: #FFFFFF;
     margin: 0 auto 32.5px auto;
@@ -278,9 +290,17 @@ span{
 
 .description-populaires{
     display: inline-block;
-    width: 169px;
+    width: 50%;
     vertical-align: top;
-    margin: 15px 0 0 10px;
+    margin: 15px 0 0 5px;
+}
+
+.titre-prix-carte-populaires{
+    height: 105px;
+}
+
+.activites{
+    width: 90%;
 }
 
 .activites h2{
@@ -306,27 +326,31 @@ span{
     border-radius: 20px 20px 0 0;
 }
 
+.titre-carte-activites{
+    display: flex;
+    height: 45px;
+    align-items: center;
+}
+
 .activites h4{
-    
+    margin-left: 15px;
 }
 
 footer{
     background-color: #f2f2f2;
     margin-top: 65px;
     height: 225px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    padding: 45px 55px 45px 35px;
+}
+
+footer ul{
+    padding: 0;
 }
 
 .colonnes-footer{
     display: flex;
-    gap: 200px;
-    margin-left: 40px;
-}
-
-.liste-footer{
-    margin-top: 45px;
+    gap: 10%;
 }
 
 .liste-footer h3{
@@ -346,36 +370,65 @@ footer a{
 .cartes-cliquables{
     text-decoration: none;
     color: inherit;
+    width: 100%;
 }
 
 
 @media screen and (max-width: 992px) {
 
     header{
-        width: 880px;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .trouver-hebergement{
-        width: 880px;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .container-filtres{
+        width: 100%;
+        height: 70px;
+        gap: 10px;
+    }
+
+    .icones-filtres{
+        margin-right: 10px;
+    }
+
+    .filtres{
+        text-align: center;
+        gap: 7px;
+    }
+
+    .filtre{
+        padding: 0 13px;
     }
 
     .hebergements-et-populaires{
         display: block;
+        width: 100%;
     }
 
     .hebergements{
-        width: 880px;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
 
+    .container-hebergements{
+        gap: 20px;
+        grid-template-columns: 31% 31% 31%;
+    }
+
+    .description-hebergements{
+        width: 200px;
     }
 
     .populaires{
-        width: 880px;
+        width: 95%;
         height: 278px;
         margin-left: auto;
         margin-right: auto;
@@ -384,13 +437,14 @@ footer a{
 
     .container-populaires{
         display: flex;
+        gap: 15px;
     }
 
     .carte-populaires{
         display: flex;
-        width: 30%;
         height: 144px;
         align-items: center;
+        margin: 0 auto;
     }
 
     .img-populaires{
@@ -398,28 +452,38 @@ footer a{
     }
 
     .description-populaires{
-        width: 111px;
-        height: 57px;
+        margin: 15px 0 0 0;
     }
 
-    .description-populaires p{
-        font-size: 12px;
+    .titre-prix-carte-populaires{
+        height: 105px;
+        width: 123px;
+    }
+
+    .titre-prix-carte-populaires p{
+        font-size: 13px;
     }
 
     .populaires h4{
-        width: 111px;
+        width: 110px;
     }
+
+    .populaires p{
+        width: 135px;
+    }
+
 
     .titre-prix-carte-populaires{
         margin-bottom: 0;
     }
 
     .etoiles-populaires{
-        bottom: 0;
+        position: absolute;
+
     }
 
     .activites{
-        width: 880px;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -437,21 +501,12 @@ footer a{
         height: 56px;
     }
 
-    .activites h4{
-        
-    }
-
-    .filtres{
-        text-align: center;
-    }
-
     footer{
-        width: 879.65px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .colonnes-footer{
-        gap: 40px;
-    }
 
 }
 
@@ -460,6 +515,7 @@ footer a{
     header{
         display: block;
         text-align: center;
+        width: 95%;
     }
 
     #logo{
@@ -474,6 +530,130 @@ footer a{
         color: #0065FC;
         border-bottom: solid #0065FC 3px;
         border-top: none;
+    }
+
+    .trouver-hebergement{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trouver-hebergement h2{
+        width: 300px;
+    }
+
+    form span{
+        visibility: hidden;
+    }
+
+    form .fa-magnifying-glass{
+        visibility: visible;
+    }
+
+    #rechercher{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        width: 50px;
+    }
+
+    .container-filtres{
+        display: block;
+        height: auto;
+    }
+
+    .filtres{
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .filtre{
+        font-size: 11px;
+        display: flex; 
+        flex-basis: calc(50% - 40px);  
+        justify-content: start;
+        vertical-align: middle;
+        align-items: center;
+        margin: 0 7px 10px 0;
+    }
+
+    .fa-info{
+        -webkit-text-stroke: 1px #0065FC;
+    }
+
+    .hebergements-et-populaires{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .populaires{
+        border-radius: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .container-populaires{
+        display: block;
+    }
+
+    .carte-populaires{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .hebergements{
+        border-radius: 0;
+        background-color: #FFFFFF;
+        height: auto;
+        width: auto;
+    }
+
+    .container-hebergements{
+        display: block;
+    }
+
+    .carte-hebergements{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    #Afficher-plus{
+        visibility: hidden;
+    }
+
+    .activites{
+        height: auto;
+    }
+
+    .activites h2{
+        width: 115px;
+    }
+
+    .container-activites{
+        display: block;
+    }
+
+    .carte-activites{
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    footer{
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding: 50px 0 0 30px;
+    }
+
+    .colonnes-footer{
+        display: block;
+    }
+
+    .liste-footer{
+        padding-bottom: 50px;
     }
 
 }
