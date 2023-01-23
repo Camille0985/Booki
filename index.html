@@ -8,8 +8,7 @@
     <title>Booki</title>
 </head>
 <body>
-    <header>
-        
+    <header>        
         <img src="assets/Images Booki/logo/Booki.png" alt="logo" id="logo">
         <nav>
             <a href="#hebergements" id="Lien-hebergement">Hébergements</a>
@@ -17,38 +16,39 @@
         </nav>
     </header>
     
-    <section class="trouver-hebergement">
-        <h2>Trouver votre hébergement pour des vacances de rêve</h2>
-        <p>En plein centre-ville ou pleine nature</p>
-        <form>
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Marseille, France">
-            <button type="submit" id="rechercher">
-                <span id="rechercher-texte">Rechercher</span>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <div class="container-informations-hebergements">
-            <div class="container-filtres">
-                <h3>Filtres</h3>
+    <main>
+        <section id="trouver-hebergement">
+            <h2>Trouver votre hébergement pour des vacances de rêve</h2>
+            <p>En plein centre-ville ou pleine nature</p>
+            <form>
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Marseille, France">
+                <button type="submit" id="rechercher">
+                    <span>Rechercher</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="container-informations-hebergements">
                 <div class="filtres">
-                    <button class="filtre"><i class="fa-solid fa-money-bill-wave icones-filtres"></i>Economique</button>
-                    <button class="filtre"><i class="fa-solid fa-person icones-filtres"></i>Familial</button>
-                    <button class="filtre"><i class="fa-solid fa-heart icones-filtres"></i>Romantique</button>
-                    <button class="filtre"><i class="fa-solid fa-dog icones-filtres"></i>Animaux autorisés</button>
+                    <h3>Filtres</h3>
+                    <div id="container-filtres">
+                        <button><i class="fa-solid fa-money-bill-wave icones-filtres"></i>Economique</button>
+                        <button><i class="fa-solid fa-person icones-filtres"></i>Familial</button>
+                        <button><i class="fa-solid fa-heart icones-filtres"></i>Romantique</button>
+                        <button><i class="fa-solid fa-dog icones-filtres"></i>Animaux autorisés</button>
+                    </div>
+                </div>
+                <div class="information-logements-disponibles">
+                    <div><i class="fa-solid fa-info"></i></div>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
             </div>
-            <div class="information-logements-disponibles">
-                <i class="fa-solid fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <main>
-        <div class="hebergements-et-populaires">
+        <div id="hebergements-et-populaires">
             <section class="hebergements" id="hebergements">
                 <h2>Hébergements à Marseille</h2>
-                <div class="container-hebergements">
+                <div id="container-hebergements">
                     <div class="carte-hebergements">
                         <a href="#" class="cartes-cliquables">
                             <img src="assets/Images Booki/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="chambre" class="img-hebergements">
@@ -163,12 +163,12 @@
                 </div>
             </section>
 
-            <section class="populaires">
+            <section id="populaires">
                 <div class="icone-titre-populaires">
                     <h2>Les plus populaires</h2>
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
-                <div class="container-populaires">
+                <div id="container-populaires">
                     <div class="carte-populaires">
                         <a href="#" class="cartes-cliquables">
                             <img src="assets/Images Booki/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="chambre" class="img-populaires">
@@ -227,9 +227,9 @@
             </section>
         </div>
 
-        <article class="activites" id="activites">
+        <article id="activites">
             <h2>Activités à Marseille</h2>
-            <div class="container-activites">
+            <div id="container-activites">
                 <div class="carte-activites">
                     <a href="#" class="cartes-cliquables">
                         <img src="assets/Images Booki/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux-Port" class="img-activites">
@@ -267,7 +267,7 @@
     </main>
 
     <footer>
-        <div class="colonnes-footer">
+        <div id="container-colonnes-footer">
             <div class="liste-footer">
                 <ul>
                     <h3>À propos</h3>
