@@ -32,10 +32,6 @@ header{
     height: 19px;
 }
 
-nav{
-    align-items: center;
-}
-
 header a{
     padding: 43px 18px 0 18px;
     text-decoration: none;
@@ -163,7 +159,6 @@ input{
 #hebergements-et-populaires{
     display: flex;
     justify-content: space-between;
-    gap: 30px;
 }
 
 #hebergements, #populaires{
@@ -335,7 +330,7 @@ footer{
     background-color: #f2f2f2;
     margin-top: 65px;
     height: 225px;
-    padding: 45px 55px 0 0;
+    padding-top: 45px;
 }
 
 footer ul{
@@ -346,7 +341,6 @@ footer ul{
     width: 70%;
     display: flex;
     justify-content: space-around;
-    vertical-align: middle;
 }
 
 .titre-liste-footer{
